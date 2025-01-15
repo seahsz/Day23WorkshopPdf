@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary</title>
+</head>
+<body>
+
+    <table th:object="${order}">
+        <tbody>
+            <tr>
+                <td>Order Id:</td>
+                <td th:text="*{orderId}"></td>
+            </tr>
+            <tr>
+                <td>Order Date:</td>
+                <td th:text="*{orderDate}"></td>
+            </tr>
+            <tr>
+                <td>Customer Id:</td>
+                <td th:text="*{customerId}"></td>
+            </tr>
+            <tr>
+                <td>Total Price:</td>
+                <td th:text="*{price}"></td>
+            </tr>
+            <tr>
+                <td>Cost Basis:</td>
+                <td th:text="*{cost}"></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <a href="/">Back</a>
+
+</body>
+</html>
